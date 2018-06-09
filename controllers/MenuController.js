@@ -1,4 +1,5 @@
  const inquirer = require('inquirer');
+ const timestamp = require('console-timestamp');
 
  module.exports = class MenuController {
    constructor(){
@@ -9,6 +10,7 @@
         message: "Please choose from an option below: ",
         choices: [
           "Add new contact",
+          "Get Date",
           "Exit"
         ]
       }
@@ -22,6 +24,9 @@
        switch(response.mainMenuChoice){
          case "Add new contact":
            this.addContact();
+           break;
+         case "Get Date":
+           this.getDate();
            break;
          case "Exit":
            this.exit();
@@ -42,6 +47,11 @@
    addContact(){
      this.clear();
      console.log('addContact called');
+     this.main();
+   }
+
+   getDate(){
+     console.log('DD-MM-YY hh:mm'.timestamp);
      this.main();
    }
 
