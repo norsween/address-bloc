@@ -59,6 +59,12 @@
      console.log("Thanks for using AddressBloc!");
      process.exit();
    }
+
+   remindMe(){
+     console.log("Learning is a life-long pursuit!");
+     this.main();
+   }
+
    getContactCount(){
     return this.contacts.length;
    }
