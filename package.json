@@ -4,7 +4,7 @@
   "description": "An application to model an address book in Node",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "set NODE_ENV=test && jasmine"
   },
   "author": "",
   "license": "ISC",
@@ -12,5 +12,8 @@
     "console-timestamp": "^0.3.0",
     "inquirer": "^5.1.0",
     "log-timestamp": "^0.1.2"
+  },
+  "devDependencies": {
+    "jasmine": "^3.1.0"
   }
 }

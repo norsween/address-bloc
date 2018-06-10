@@ -16,9 +16,9 @@
       }
     ];
     this.contacts = [];
-}
+  }
 
-   main(){
+  main(){
      console.log(`Welcome to AddressBloc!`);
      inquirer.prompt(this.mainMenuQuestions).then((response) => {
        switch(response.mainMenuChoice){
@@ -59,5 +59,7 @@
      console.log("Thanks for using AddressBloc!");
      process.exit();
    }
-
+   getContactCount(){
+    return this.contacts.length;
+   }
  }
